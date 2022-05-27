@@ -1,0 +1,29 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Roboto;
+}
+
+
+
+main {
+    padding: 64px;
+}
+
+section {
+    padding: 0px 16px;
+}
+
+.container-tabela {
+    position: relative;
+    min-height: 200px;
+    max-height: 400px;
+    overflow: auto;   
+}
+
+
+table {
+    width: 100%;
+  }

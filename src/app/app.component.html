@@ -1,0 +1,59 @@
+<mat-toolbar color="primary">
+  <span>FakeStore API</span>
+</mat-toolbar>
+
+<main>
+
+  <section>
+
+    <h1>Produtos</h1>
+
+    <div class="">
+
+      <table mat-table [dataSource]="produtos" class="mat-elevation-z8">
+
+         <!-- Coluna ID -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>ID</th>
+          <td mat-cell *matCellDef="let linha">{{linha.id}}</td>
+        </ng-container>
+
+         <!-- Coluna Title -->
+         <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef>Nome</th>
+          <td mat-cell *matCellDef="let linha">{{linha.title}}</td>
+        </ng-container>
+
+        <!-- Coluna Preço -->
+        <ng-container matColumnDef="price">
+          <th mat-header-cell *matHeaderCellDef>Preço</th>
+          <td mat-cell *matCellDef="let linha">{{ linha.price }}</td>
+        </ng-container>
+
+
+        <!-- Coluna Categoria -->
+        <ng-container matColumnDef="category">
+          <th mat-header-cell *matHeaderCellDef>Preço</th>
+          <td mat-cell *matCellDef="let linha">{{ linha.category }}</td>
+        </ng-container>
+
+        <!-- Action Column -->
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef> Ações </th>
+            <td mat-cell *matCellDef="let linha" class="action-link"> 
+              <!--  <a (click)="openDialog('Update',element)">Edit</a> | 
+              <a (click)="openDialog('Delete',element)">Delete</a>  -->
+            </td>
+        </ng-container>
+       
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      </table>
+
+    </div>
+
+  </section>
+
+</main>
